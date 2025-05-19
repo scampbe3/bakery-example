@@ -3,9 +3,11 @@ const cartItemsContainer = document.getElementById('cart-items');
 const cartCount = document.getElementById('cart-count');
 const cartTotal = document.getElementById('cart-total');
 const checkoutButton = document.getElementById('checkout-button');
+
 const API_BASE = location.hostname.includes('amplifyapp.com')
-               ? `https://bakery-api.${location.hostname}`   // production
-               : '';                                         // local dev
+  ? 'https://master.dtpqt32sf63ob.amplifyapp.com/'
+  : '';
+                                         // local dev
 
 
 

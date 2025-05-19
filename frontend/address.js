@@ -3,9 +3,11 @@ const form  = document.getElementById('addr-form');
 const error = document.getElementById('addr-error');
 
 /* choose the correct API host */
+
 const API_BASE = location.hostname.includes('amplifyapp.com')
-               ? `https://bakery-api.${location.hostname}`   // production
-               : '';                                         // local dev
+  ? 'https://master.dtpqt32sf63ob.amplifyapp.com/'
+  : '';
+                                         // local dev
 
 form.addEventListener('submit', async e => {
   e.preventDefault();

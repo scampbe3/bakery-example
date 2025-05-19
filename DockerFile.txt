@@ -8,7 +8,7 @@ RUN npm --prefix backend install
 
 # copy source
 COPY backend ./backend
-COPY frontend ./frontend          # let Express serve this too (local dev)
+COPY frontend ./frontend
 
 ENV PORT=8080
 EXPOSE 8080

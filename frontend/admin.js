@@ -3,9 +3,11 @@ const tbody = document.getElementById('inv-body');
 const alert = document.getElementById('alert');
 
 /* pick the correct API host */
+
 const API_BASE = location.hostname.includes('amplifyapp.com')
-               ? `https://bakery-api.${location.hostname}`   // production
-               : '';                                         // local dev
+  ? 'https://master.dtpqt32sf63ob.amplifyapp.com/'
+  : '';
+                                  // local dev
 
 async function loadInventory() {
   const res   = await fetch(`${API_BASE}/api/inventory`);
