@@ -1,5 +1,10 @@
 /* -------------------- constants & DOM refs -------------------- */
-const API = 'http://localhost:5000/api/products';
+
+
+const API_BASE = location.hostname.includes('amplifyapp.com')
+               ? `https://bakery-api.${location.hostname}`   // production
+               : '';                                         // local dev
+const API = `${API_BASE}/api/products`;
 const productList = document.getElementById('product-list');
 const cartCount   = document.getElementById('cart-count');
 const featuredBox = document.getElementById('featured-inner');

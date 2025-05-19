@@ -3,9 +3,11 @@ const cartItemsContainer = document.getElementById('cart-items');
 const cartCount = document.getElementById('cart-count');
 const cartTotal = document.getElementById('cart-total');
 const checkoutButton = document.getElementById('checkout-button');
+const API_BASE = location.hostname.includes('amplifyapp.com')
+               ? `https://bakery-api.${location.hostname}`   // production
+               : '';                                         // local dev
 
-// Initialize Stripe with your publishable key
-const stripe = Stripe('pk_test_51Pyj6n02uQgj3FXotmonNHHWzsQWHOmz8f7EqwT5FyeO3GmXRkr13USBJOdZKDuVQj579fIyJe5KZqPnh3z8UyC800MwLGQCae'); // Replace with your Stripe Publishable Key
+
 
 // Initialize cart from localStorage or as an empty array
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -158,7 +160,7 @@ const handleCheckout = async () => {
   }
 
   try {
-    const response = await fetch('http://localhost:5000/create-checkout-session', {
+    const response = await fetch(`${API_BASE}/create-checkout-session`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
