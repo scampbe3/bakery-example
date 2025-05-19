@@ -4,9 +4,8 @@ const cartCount = document.getElementById('cart-count');
 const cartTotal = document.getElementById('cart-total');
 const checkoutButton = document.getElementById('checkout-button');
 
-const API_BASE = location.hostname.includes('amplifyapp.com')
-  ? 'https://master.dtpqt32sf63ob.amplifyapp.com/'
-  : '';
+const API_BASE = 'https://bakery-api.dtqp32sf63ob.amplifyapp.com';
+
                                          // local dev
 
 

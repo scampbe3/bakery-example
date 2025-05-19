@@ -2,9 +2,8 @@
 
 
 
-const API_BASE = location.hostname.includes('amplifyapp.com')
-  ? 'https://master.dtpqt32sf63ob.amplifyapp.com/'
-  : '';
+const API_BASE = 'https://bakery-api.dtqp32sf63ob.amplifyapp.com';
+
                                        // local dev
 const API = `${API_BASE}/api/products`;
 const productList = document.getElementById('product-list');
