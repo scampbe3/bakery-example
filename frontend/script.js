@@ -2,7 +2,7 @@
 
 
 
-const API_BASE = 'https://bakery-api.dtqp32sf63ob.amplifyapp.com';
+const API_BASE = 'https://bakery-api.master.dtqp32sf63ob.amplifyapp.com';
 
                                        // local dev
 const API = `${API_BASE}/api/products`;
