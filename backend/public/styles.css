@@ -243,11 +243,32 @@ input[type="number"] {
 
 .with-sidebar { padding-right: 200px; }
 
-/* hide sidebar on tablets/phones */
-@media (max-width: 991.98px){
-  #cart-sidebar{ display:none; }
-  body{ padding-right: 0; }
+/* phones: make the single column truly centred */
+/* ---------- final mobile-layout fix ---------- */
+@media (max-width: 575.98px){
+
+    #cart-sidebar{ display:none; }
+  .with-sidebar{ padding-right:0 !important; }
+  /* 1. kill the row’s negative margin (pushes cards left) */
+  #product-list{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 2. give each single-column card a fixed, centred width */
+  #product-list > .col-12{
+    flex: 0 0 92%;        /* 92 % of the viewport → nice side gutters      */
+    max-width: 92%;       /* keeps height calculations stable              */
+    margin-left: auto;    /* auto margins centre the column in the row     */
+    margin-right: auto;
+    padding-left: 0 !important;   /* remove residual column padding          */
+    padding-right: 0 !important;
+  }
 }
+
+
+
+
 
 /* Sidebar thumbnails */
 #sidebar-items img{

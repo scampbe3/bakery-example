@@ -2,10 +2,10 @@
 
 
 
-const API_BASE = 'https://bakery-api.master.dtqp32sf63ob.amplifyapp.com';
+const API_BASE = '/api';          // <-- new
 
                                        // local dev
-const API = `${API_BASE}/api/products`;
+const API = `${API_BASE}/products`;
 const productList = document.getElementById('product-list');
 const cartCount   = document.getElementById('cart-count');
 const featuredBox = document.getElementById('featured-inner');
@@ -169,7 +169,7 @@ function displayProducts(products) {
 
 function createProductCard(p) {
   const col = document.createElement('div');
-  col.className = 'col-md-4';
+  col.className = 'col-12 col-sm-6 col-lg-4 d-flex';
 
   col.innerHTML = `
     <div class="card h-100">

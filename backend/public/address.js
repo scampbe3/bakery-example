@@ -4,7 +4,7 @@ const error = document.getElementById('addr-error');
 
 /* choose the correct API host */
 
-const API_BASE = 'https://bakery-api.master.dtqp32sf63ob.amplifyapp.com';
+const API_BASE = '/api';          // <-- new
 
                                          // local dev
 
@@ -17,7 +17,7 @@ form.addEventListener('submit', async e => {
 
   try {
     /* 1 ▸ validate ZIP ↔ city/state on the backend */
-    const res = await fetch(`${API_BASE}/api/validate-address`, {
+    const res = await fetch(`${API_BASE}/validate-address`, {
       method : 'POST',
       headers: { 'Content-Type':'application/json' },
       body   : JSON.stringify(addr)

@@ -4,12 +4,12 @@ const alert = document.getElementById('alert');
 
 /* pick the correct API host */
 
-const API_BASE = 'https://bakery-api.master.dtqp32sf63ob.amplifyapp.com';
+const API_BASE = '/api';          // <-- new
 
                                   // local dev
 
 async function loadInventory() {
-  const res   = await fetch(`${API_BASE}/api/inventory`);
+  const res   = await fetch(`${API_BASE}/inventory`);
   const items = await res.json();
 
   tbody.innerHTML = items.map(p => `
@@ -32,7 +32,7 @@ tbody.addEventListener('change', async e => {
   const qty = parseInt(e.target.value, 10);
 
   try {
-    const res = await fetch(`${API_BASE}/api/inventory/${id}`, {
+    const res = await fetch(`${API_BASE}/inventory/${id}`, {
       method : 'PUT',
       headers: { 'Content-Type':'application/json' },
       body   : JSON.stringify({ quantity: qty })
