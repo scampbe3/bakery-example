@@ -132,7 +132,55 @@ await Product.bulkCreate([
   price: 2.30,
   imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Pretzel_%281%29.jpg/640px-Pretzel_%281%29.jpg',
   category: 'Pretzels'
-}
+},
+  {
+    name: "Chocolate Éclair",
+    imageUrl: "https://images.pexels.com/photos/30700723/pexels-photo-30700723.jpeg?auto=compress&cs=tinysrgb&h=350",
+    description: "Choux pastry filled with vanilla pastry cream and topped with a rich dark chocolate glaze.",
+    price: 4.50,
+    category: "Pastries",
+    featured: false
+  },
+  {
+    name: "Lemon Tart",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Lemon_tarts.jpg/640px-Lemon_tarts.jpg",
+    description: "Buttery shortcrust shell filled with tangy lemon custard, finished with a dusting of powdered sugar.",
+    price: 5.75,
+    category: "Tarts",
+    featured: false
+  },
+  {
+    name: "Cinnamon Roll",
+    imageUrl: "https://images.pexels.com/photos/351962/pexels-photo-351962.jpeg?auto=compress&cs=tinysrgb&h=350",
+    description: "Soft, sweet roll swirled with cinnamon sugar and drizzled with creamy vanilla icing.",
+    price: 3.99,
+    category: "Pastries",
+    featured: false
+  },
+  {
+    name: "Blueberry Muffin",
+    imageUrl: "https://images.pexels.com/photos/90609/pexels-photo-90609.png?auto=compress&cs=tinysrgb&h=350",
+    description: "Moist muffin packed with juicy blueberries and topped with a golden crumb streusel.",
+    price: 3.49,
+    category: "Pastries",
+    featured: false
+  },
+  {
+    name: "Pumpkin Pie",
+    imageUrl: "https://images.pexels.com/photos/669734/pexels-photo-669734.jpeg?auto=compress&cs=tinysrgb&h=350",
+    description: "Spiced pumpkin custard baked in a flaky crust, capturing the essence of autumn in every bite.",
+    price: 4.99,
+    category: "Pies",
+    featured: false
+  },
+  {
+    name: "French Macaron",
+    imageUrl: "https://images.pexels.com/photos/947802/pexels-photo-947802.jpeg?auto=compress&cs=tinysrgb&h=350",
+    description: "Delicate almond meringue cookies sandwiched with a luscious flavored buttercream filling.",
+    price: 2.75,
+    category: "Pastries",
+    featured: false
+  }
 
 
 
