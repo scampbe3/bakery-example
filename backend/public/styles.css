@@ -327,3 +327,11 @@ input[type="number"] {
 #live-toast.toast {          /* cover both the div and .toast element */
   z-index: 2000 !important;  /* higher than sidebar (1030) and modal (1050) */
 }
+
+.card-img-top {
+  width: 100%;                   /* fill the card’s width */
+  aspect-ratio: 4 / 3;           /* force a uniform 4:3 box */
+  object-fit: cover;             /* crop/fill the box */
+  /* remove the old max-height if present */
+  max-height: none !important;
+}

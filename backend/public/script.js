@@ -20,7 +20,13 @@ const saveCart = () => {
   renderSidebar();            // <─ NEW
 };
 const updateCartCount = () => {
-  if (cartCount) cartCount.textContent = cart.reduce((t, i) => t + i.quantity, 0);
+  const total = cart.reduce((t, i) => t + i.quantity, 0);
+
+  // update every element that carries a cart count
+  ['cart-count', 'cart-count-mobile'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = total;
+  });
 };
 
 function changeSidebarQty(id, delta){
